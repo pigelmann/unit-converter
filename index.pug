@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        link(rel="stylesheet" href="css/style.css")
+        script(defer src="index.js")
+        style @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+    body
+        #wrapper
+            #in
+                h1 Metric/Imperial Unit Conversion
+                .input-group
+                    label.input-label(for="unit-input") Input here
+                    input#unit-input(type="text")
+                button#convert-btn Convert
+            #out
+                .out-unit
+                    h3 Length (Meter/Feet)
+                    p#length
+                .out-unit
+                    h3 Volume (Liters/Gallons)
+                    p#volume
+                .out-unit
+                    h3 Mass (Kilograms/Pounds)
+                    p#mass
+

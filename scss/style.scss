@@ -1,0 +1,150 @@
+@import 'reset';
+
+:root {
+  font-size: 14px;
+}
+
+body {
+  background-color: #1C1C1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Inter, sans-serif;
+  color: white;
+}
+
+#wrapper {
+  width: 550px;
+  text-align: center;
+  background-color: red;
+}
+
+@import "ref";
+
+#in {
+  background-color: #6943FF;
+  padding: 38px 10px 36px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+
+  input {
+    font-size: 58px;
+    box-sizing: border-box;
+    font-weight: 800;
+    width: 117px;
+    border: 2px solid #B295FF;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-label {
+  color: #B295FF;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  animation: blink 530ms ease-out infinite alternate;
+  transition: transform 200ms ease-in,
+  font-size 200ms ease-in,
+  opacity 200ms;
+}
+
+.focused {
+  opacity: 0;
+  animation: fade-out 200ms ease-out;
+  user-select: none;
+  transform: translateY(-50px) scale(5);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    color: #B295FF;
+  }
+  100% {
+    opacity: 0;
+    color: darkviolet;
+  }
+}
+
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+#convert-btn {
+  font-size: 16px;
+  font-weight: 500;
+  width: 117px;
+  padding: 12px;
+  background-color: #FFF;
+  color: #3d3d3d;
+  border-radius: 5px;
+}
+
+#out {
+  background-color: #1F2937;
+  color: rgba(255, 255, 255, 0.66);
+  padding: 36px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+  & p {
+    line-height: 1.2em;
+    height: 1rem;
+  }
+
+  & strong {
+    color: white;
+  }
+
+  & h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #CCC1FF;
+    margin-bottom: 16px;
+  }
+}
+
+.unit {
+  color: white;
+  font-weight: 600;
+}
+
+.delimiter {
+  color: rgba(255, 255, 255, 0.2)
+}
+
+.out-unit {
+  background-color: #273549;
+  padding: 30px 20px 28px;
+}
